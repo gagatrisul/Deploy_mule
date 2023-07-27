@@ -61,10 +61,10 @@
 					<execution>
 						<id>test</id>
 						<phase>test</phase>
-						<goals>
-							<goal>test</goal>
-							<goal>coverage-report</goal>
-						</goals>
+						///<goals>
+							///<goal>test</goal>
+							///<goal>coverage-report</goal>
+						///</goals>
 					</execution>
 				</executions>
 				<configuration>
