@@ -112,16 +112,16 @@ jobs:
         java-version: 1.8
         
     - name: Set up Maven Action
-      uses: s4u/setup-maven-action@v1.7.0
+      uses: s4u/maven-settings-action@v2.5.0
       with:
         java-version: 8
         maven-version: 3.8.2
         
-    #- uses: actions/checkout@v3
-      #with:
-        #repository: 'Deploy_mule'
-        #token: ${{ env.githubToken }}
-        #path: 'script'
+    - uses: actions/checkout@v3
+      with:
+        repository: 'Deploy_mule'
+        token: ${{ env.githubToken }}
+        path: 'script'
         
 #******************************Action to create the settings.xml by passing the necessary ids and URLs*******************************************
     - name: Create maven settings.xml
