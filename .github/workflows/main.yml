@@ -134,7 +134,7 @@ jobs:
         cat ~/.m2/settings.xml                                 #To view the settings.xml
         
     - run: |
-        mvn clean deploy -DskipMunitTests -DbusinessGroupId=${{ env.businessGroupId }}   # command to deploy the application in exchange as a mandatory step as per the Cloudhub V2
+        mvn clean package && mvn clean deploy -DmuleDeploy -DskipMunitTests -DbusinessGroupId=${{ env.businessGroupId }}   # command to deploy the application in exchange as a mandatory step as per the Cloudhub V2
  
  #********************************************Maven script to deploy the jar to the target environment******************************************
     - name: Deploy to ${{ env.deploymentTarget }} 
