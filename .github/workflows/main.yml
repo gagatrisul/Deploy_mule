@@ -5,10 +5,10 @@
 name: DEV Deployment 
 
 on:
+  push:
+    branches: [ main ]
   pull_request:
-    types: [ closed ]
-    branches:
-      - main
+    branches: [ main ]
 
 # Set environment variables
 env:
